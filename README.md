@@ -121,12 +121,9 @@ Aqui estão alguns exemplos de como fazer solicitações usando `curl`:
   </code></div></div></pre>
 * **Excluir uma Tarefa:**
 
-
-<body>
-    <code>
-      curl -X DELETE http://localhost:3000/tasks/delete/1
-    </code>
-</body>
+```bash
+curl -X DELETE http://localhost:3000/tasks/delete/1
+```
 
 ## Contribuição
 
