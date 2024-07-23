@@ -2,27 +2,34 @@
 
 ## Descrição
 
-Esta API permite gerenciar tarefas com operações CRUD (Criar, Ler, Atualizar e Excluir). Utiliza o framework Express para definir as rotas e a lógica de controle para interagir com o modelo de tarefas.
+Esta API oferece uma maneira prática e eficiente para gerenciar suas tarefas do dia a dia. Com ela, você pode adicionar novas tarefas, visualizar o que já foi feito, atualizar informações e remover o que não precisa mais. Desenvolvida com o framework Express, a API tem uma interface fácil de usar, permitindo que você organize suas tarefas de forma clara e sem complicações.
+
+### Funcionalidades
+
+* **Adicionar Tarefas, Compromissos e Notificações** : Crie novos itens com detalhes como título, descrição e data, seja para tarefas, compromissos ou notificações importantes.
+* **Visualizar Itens** : Veja a lista completa de tarefas, compromissos e notificações, ou busque por itens específicos para verificar o que precisa ser feito ou agendado.
+* **Atualizar Itens** : Modifique informações de tarefas, compromissos ou notificações, como alterar datas ou detalhes, para manter tudo atualizado e em ordem.
+* **Remover Itens** : Exclua tarefas, compromissos ou notificações que foram concluídos ou que não são mais necessários.
 
 ### Estrutura do Projeto
 
 - **`src/`**: Pasta principal que contém todos os arquivos de código-fonte.
 
   - **`controllers/`**: Contém os controladores responsáveis pela lógica de controle e manipulação de dados para cada recurso da API.
+
     - **`commitmentController.js`**: Controlador para gerenciar compromissos.
     - **`notificationController.js`**: Controlador para gerenciar notificações.
     - **`taskController.js`**: Controlador para gerenciar tarefas.
-
   - **`models/`**: Contém os modelos que definem a estrutura e o comportamento dos dados para cada recurso.
+
     - **`commitmentModel.js`**: Modelo para compromissos.
     - **`notificationModel.js`**: Modelo para notificações.
     - **`taskModel.js`**: Modelo para tarefas.
-
   - **`routes/`**: Contém as definições de rotas da API para cada recurso.
+
     - **`commitment.routes.js`**: Rotas para compromissos.
     - **`notification.routes.js`**: Rotas para notificações.
     - **`task.routes.js`**: Rotas para tarefas.
-
 - **`index.js`**: Arquivo principal do projeto que inicia o servidor e configura o aplicativo.
 
 ## Configuração
@@ -139,7 +146,6 @@ curl -X PUT http://localhost:3000/tasks/update/1 -H "Content-Type: application/j
 curl -X DELETE http://localhost:3000/tasks/delete/1
 ```
 
-
 ## Contribuição
 
 Se você deseja contribuir para este projeto, siga estas etapas:
@@ -152,4 +158,4 @@ Se você deseja contribuir para este projeto, siga estas etapas:
 
 ## Licença
 
-Este projeto está licenciado sob a [Licença GTP V3.0](./LICENSE).
+Este projeto está licenciado sob a [GNU General Public License v3.0](./LICENSE).
