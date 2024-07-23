@@ -20,7 +20,7 @@ async function updateTask(req, res) {
   try {
     const id = parseInt(req.params.id, 10);
     await taskModel.updateTask(id, req.body);
-    res.status(200).json({ message: 'Task updated successfully' });
+    res.status(200).json({ message: 'Task atualizada com sucesso' });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -29,7 +29,7 @@ async function deleteTask(req, res) {
   try {
     const id = parseInt(req.params.id, 10);
     await taskModel.deleteTask(id);
-    res.status(200).json({ message: 'Task deleted successfully' });
+    res.status(200).json({ message: 'Task deletada com sucesso' });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

@@ -98,12 +98,12 @@ function deleteNotification(id) {
   });
 }
 
-// Adiciona dados de exemplo na inicialização do banco de dados
+//Essa função adiciona dados de exemplo na inicialização do banco de dados
 function initializeDB() {
   const exampleNotifications = [
-    { title: 'Novo comentário', dateTime: '2024-07-24T09:00:00Z', message: 'Você recebeu um novo comentário em sua postagem.' },
-    { title: 'Lembrete de reunião', dateTime: '2024-07-25T10:00:00Z', message: 'Não se esqueça da reunião marcada para hoje às 10h.' },
-    { title: 'Atualização de software', dateTime: '2024-07-26T14:00:00Z', message: 'Uma nova versão do software está disponível para atualização.' }
+    { title: 'Novo comentário', dateTime: '24-07-2024T09:00:00Z', message: 'Você recebeu um novo comentário em sua postagem.' },
+    { title: 'Lembrete de reunião', dateTime: '25-07-2024T10:00:00Z', message: 'Não se esqueça da reunião marcada para hoje às 10h.' },
+    { title: 'Atualização de software', dateTime: '26-07-2027T14:00:00Z', message: 'Uma nova versão do software está disponível para atualização.' }
   ];
 
   openDB().then(db => {

@@ -8,7 +8,7 @@ router.post('/add', async (req, res) => {
     const newNotification = req.body;
     const notificationId = await addNotification(req, res);
     if (!res.headersSent) {
-      res.status(201).json({ message: 'Notification added successfully', notificationId });
+      res.status(201).json({ message: 'Notificação adicionada com sucesso', notificationId });
     }
   } catch (error) {
     if (!res.headersSent) {
@@ -38,7 +38,7 @@ router.put('/update/:id', async (req, res) => {
     const updatedNotification = req.body;
     await updateNotification(req, res);
     if (!res.headersSent) {
-      res.status(200).json({ message: 'Notification updated successfully' });
+      res.status(200).json({ message: 'Notificação atualizada com sucesso' });
     }
   } catch (error) {
     if (!res.headersSent) {
@@ -53,7 +53,7 @@ router.delete('/delete/:id', async (req, res) => {
     const id = parseInt(req.params.id, 10);
     await deleteNotification(req, res);
     if (!res.headersSent) {
-      res.status(200).json({ message: 'Notification deleted successfully' });
+      res.status(200).json({ message: 'Notificação deletada com sucesso' });
     }
   } catch (error) {
     if (!res.headersSent) {

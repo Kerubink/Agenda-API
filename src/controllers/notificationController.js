@@ -4,7 +4,7 @@ async function addNotification(req, res) {
   try {
     const id = await notificationModel.addNotification(req.body);
     if (!res.headersSent) {
-      res.status(201).json({ id, message: 'Notification added successfully' });
+      res.status(201).json({ id, message: 'Notificação adicionada com sucesso' });
     }
   } catch (error) {
     if (!res.headersSent) {
@@ -31,7 +31,7 @@ async function updateNotification(req, res) {
     const id = parseInt(req.params.id, 10);
     await notificationModel.updateNotification(id, req.body);
     if (!res.headersSent) {
-      res.status(200).json({ message: 'Notification updated successfully' });
+      res.status(200).json({ message: 'Notificação atualizada com sucesso' });
     }
   } catch (error) {
     if (!res.headersSent) {
@@ -45,7 +45,7 @@ async function deleteNotification(req, res) {
     const id = parseInt(req.params.id, 10);
     await notificationModel.deleteNotification(id);
     if (!res.headersSent) {
-      res.status(200).json({ message: 'Notification deleted successfully' });
+      res.status(200).json({ message: 'Notificação deletada com sucesso' });
     }
   } catch (error) {
     if (!res.headersSent) {

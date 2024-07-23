@@ -99,12 +99,12 @@ function deleteAppointment(id) {
 }
 
 
-//essa função adiciona dados de exemplo na api quando o IndexedDB é iniciado
+//Essa função adiciona dados de exemplo na inicialização do banco de dados
 function initializeDB() {
   const exampleAppointments = [
-    { title: 'Reunião com equipe', dateTime: '2024-07-25T10:00:00Z', location: 'Sala de Conferências', description: 'Discutir o progresso do projeto' },
-    { title: 'Consulta médica', dateTime: '2024-07-26T15:00:00Z', location: 'Clínica São João', description: 'Consulta de rotina com o Dr. Silva' },
-    { title: 'Entrevista de emprego', dateTime: '2024-07-27T09:00:00Z', location: 'Escritório ABC', description: 'Entrevista para a vaga de desenvolvedor' }
+    { title: 'Reunião com equipe', dateTime: '25-07-2024T10:00:00Z', location: 'Sala de Conferências', description: 'Discutir o progresso do projeto' },
+    { title: 'Consulta médica', dateTime: '26-07-2024T15:00:00Z', location: 'Clínica São João', description: 'Consulta de rotina com o Dr. Silva' },
+    { title: 'Entrevista de emprego', dateTime: '27-07-2024T09:00:00Z', location: 'alguem me contrata porfavoooor', description: 'preciso de um emprego pelo amor de deus a vida do desenvolvendor não ta facil' }
   ];
 
   openDB().then(db => {

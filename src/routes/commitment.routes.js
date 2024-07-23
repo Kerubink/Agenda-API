@@ -7,7 +7,7 @@ router.post('/add', async (req, res) => {
   try {
     const newAppointment = req.body;
     const appointmentId = await addAppointment(newAppointment);
-    res.status(201).json({ message: 'Appointment added successfully', appointmentId });
+    res.status(201).json({ message: 'compromisso adicionando com sucesso', appointmentId });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -29,7 +29,7 @@ router.put('/update/:id', async (req, res) => {
     const id = parseInt(req.params.id, 10);
     const updatedAppointment = req.body;
     await updateAppointment(id, updatedAppointment);
-    res.status(200).json({ message: 'Appointment updated successfully' });
+    res.status(200).json({ message: 'compromisso atualizado com sucesso' });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -40,7 +40,7 @@ router.delete('/delete/:id', async (req, res) => {
   try {
     const id = parseInt(req.params.id, 10);
     await deleteAppointment(id);
-    res.status(200).json({ message: 'Appointment deleted successfully' });
+    res.status(200).json({ message: 'compromisso deletado com sucesso' });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

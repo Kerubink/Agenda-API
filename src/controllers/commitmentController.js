@@ -25,7 +25,7 @@ async function updateAppointment(req, res) {
   try {
     const id = parseInt(req.params.id, 10);
     await appointmentModel.updateAppointment(id, req.body);
-    res.status(200).json({ message: 'Appointment updated successfully' });
+    res.status(200).json({ message: 'Compromisso atualizado com sucesso' });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -36,7 +36,7 @@ async function deleteAppointment(req, res) {
   try {
     const id = parseInt(req.params.id, 10);
     await appointmentModel.deleteAppointment(id);
-    res.status(200).json({ message: 'Appointment deleted successfully' });
+    res.status(200).json({ message: 'Compromisso deletado com sucesso' });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

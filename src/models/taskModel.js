@@ -99,12 +99,13 @@ function deleteTask(id) {
   });
 }
 
-//essa função adiciona dados de exemplo na api quando o IndexedDB é iniciado
+
+//Essa função adiciona dados de exemplo na inicialização do banco de dados
 function initializeDB() {
   const exampleTasks = [
-    { title: 'Comprar mantimentos', description: 'Ir ao supermercado e comprar itens da lista', dueDate: '2024-07-30' },
-    { title: 'Reunião com equipe', description: 'Discutir o progresso do projeto', dueDate: '2024-07-25' },
-    { title: 'Estudar para o exame', description: 'Revisar o material do curso', dueDate: '2024-07-28' }
+    { title: 'Entregar do miniprojeto', description: 'fazer a entraga do miniprojeto e elaborar a apresentação do linkedin', dueDate: '23-07-2024' },
+    { title: 'Reunião com equipe', description: 'Discutir o progresso do projeto', dueDate: '25-07-2024' },
+    { title: 'Estudar para o exame', description: 'Revisar o material do curso', dueDate: '27-07-2024' }
   ];
 
   openDB().then(db => {
@@ -116,7 +117,7 @@ function initializeDB() {
     });
 
     transaction.oncomplete = function() {
-      console.log('Dados de exemplo adicionados com sucesso!');
+      console.log('Dados de exemplo de tasks adicionados com sucesso!');
     };
 
     transaction.onerror = function() {
