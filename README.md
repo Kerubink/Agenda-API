@@ -128,7 +128,6 @@ Aqui estão alguns exemplos de como fazer solicitações usando `curl`:
       curl -X DELETE http://localhost:3000/tasks/delete/1
     </code>
   </pre>
-  <button class="copy-button" onclick="copyCode()">Copiar Código</button>
 </body>
 
 ## Contribuição
