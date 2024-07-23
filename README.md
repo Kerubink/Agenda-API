@@ -121,23 +121,7 @@ Aqui estão alguns exemplos de como fazer solicitações usando `curl`:
   </code></div></div></pre>
 * **Excluir uma Tarefa:**
 
-<!DOCTYPE html>
 
-`<html>`
-
-<head>
-  <title>Copiar Código</title>
-  <style>
-    .copy-button {
-      margin-top: 10px;
-      padding: 5px 10px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
-</head>
 <body>
   <pre id="code-block">
     <code>
@@ -145,19 +129,7 @@ Aqui estão alguns exemplos de como fazer solicitações usando `curl`:
     </code>
   </pre>
   <button class="copy-button" onclick="copyCode()">Copiar Código</button>
-  <script>
-    function copyCode() {
-      const code = document.getElementById('code-block').innerText;
-      navigator.clipboard.writeText(code).then(() => {
-        alert('Código copiado para a área de transferência!');
-      }).catch(err => {
-        console.error('Erro ao copiar o código: ', err);
-      });
-    }
-  </script>
 </body>
-</html>
-
 
 ## Contribuição
 
