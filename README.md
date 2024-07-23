@@ -123,11 +123,9 @@ Aqui estão alguns exemplos de como fazer solicitações usando `curl`:
 
 
 <body>
-  <pre id="code-block">
     <code>
       curl -X DELETE http://localhost:3000/tasks/delete/1
     </code>
-  </pre>
 </body>
 
 ## Contribuição
