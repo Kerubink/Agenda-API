@@ -120,8 +120,44 @@ Aqui estão alguns exemplos de como fazer solicitações usando `curl`:
   <pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>bash</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copiar código</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-bash">curl -X PUT http://localhost:3000/tasks/update/1 -H "Content-Type: application/json" -d '{"title": "Tarefa Atualizada", "description": "Descrição atualizada", "dueDate": "2024-08-01"}'
   </code></div></div></pre>
 * **Excluir uma Tarefa:**
-  <pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>bash</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copiar código</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-bash">curl -X DELETE http://localhost:3000/tasks/delete/1
-  </code></div></div></pre>
+
+<!DOCTYPE html>
+
+`<html>`
+
+<head>
+  <title>Copiar Código</title>
+  <style>
+    .copy-button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <pre id="code-block">
+    <code>
+      curl -X DELETE http://localhost:3000/tasks/delete/1
+    </code>
+  </pre>
+  <button class="copy-button" onclick="copyCode()">Copiar Código</button>
+  <script>
+    function copyCode() {
+      const code = document.getElementById('code-block').innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        alert('Código copiado para a área de transferência!');
+      }).catch(err => {
+        console.error('Erro ao copiar o código: ', err);
+      });
+    }
+  </script>
+</body>
+</html>
+
 
 ## Contribuição
 
@@ -135,4 +171,4 @@ Se você deseja contribuir para este projeto, siga estas etapas:
 
 ## Licença
 
-Este projeto está licenciado sob a [Licença GPL v3.0](./LICENSE).
+Este projeto está licenciado sob a [GNU General Public License v3.0](./LICENSE).
