@@ -4,24 +4,26 @@
 
 Esta API permite gerenciar tarefas com operações CRUD (Criar, Ler, Atualizar e Excluir). Utiliza o framework Express para definir as rotas e a lógica de controle para interagir com o modelo de tarefas.
 
-Estrutura do Projeto
+### Estrutura do Projeto
 
-<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>makefile</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copiar código</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-makefile">C:.
-├───controllers
-│       commitmentController.js  
-│       notificationController.js  
-│       taskController.js
-│
-├───models
-│       commitmentModel.js
-│       notificationModel.js
-│       taskModel.js
-│
-|───routes
-|       commitment.routes.js
-|       notification.routes.js
-|       task.routes.js
-</code></div></div></pre>
+- **`src/`**: Pasta principal que contém todos os arquivos de código-fonte.
+
+  - **`controllers/`**: Contém os controladores responsáveis pela lógica de controle e manipulação de dados para cada recurso da API.
+    - **`commitmentController.js`**: Controlador para gerenciar compromissos.
+    - **`notificationController.js`**: Controlador para gerenciar notificações.
+    - **`taskController.js`**: Controlador para gerenciar tarefas.
+
+  - **`models/`**: Contém os modelos que definem a estrutura e o comportamento dos dados para cada recurso.
+    - **`commitmentModel.js`**: Modelo para compromissos.
+    - **`notificationModel.js`**: Modelo para notificações.
+    - **`taskModel.js`**: Modelo para tarefas.
+
+  - **`routes/`**: Contém as definições de rotas da API para cada recurso.
+    - **`commitment.routes.js`**: Rotas para compromissos.
+    - **`notification.routes.js`**: Rotas para notificações.
+    - **`task.routes.js`**: Rotas para tarefas.
+
+- **`index.js`**: Arquivo principal do projeto que inicia o servidor e configura o aplicativo.
 
 ## Configuração
 
@@ -35,15 +37,17 @@ Certifique-se de que as seguintes dependências estejam instaladas:
 
 Instale as dependências necessárias com:
 
-<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>bash</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copiar código</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-bash">npm run install
-</code></div></div></pre>
+```bash
+npm run install
+```
 
 ### Iniciar o Servidor
 
 Para iniciar o servidor, execute:
 
-<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>bash</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copiar código</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-bash">npm run start
-</code></div></div></pre>
+```bash
+npm run start
+```
 
 O servidor estará disponível em `http://localhost:3000` por padrão.
 
@@ -57,12 +61,13 @@ O servidor estará disponível em `http://localhost:3000` por padrão.
 * **Descrição:** Adiciona uma nova tarefa.
 * **Corpo da Solicitação:**
 
-<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>json</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copiar código</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-json">{
+```json
+{
     "title": "Título da Tarefa",
     "description": "Descrição da Tarefa",
     "dueDate": "Data de Vencimento"
   }
-  </code></div></div></pre>
+```
 
 * **Resposta:**
   * **Código 201:** `{"message": "Task adicionanda com sucesso", "taskId": ID}`
@@ -84,12 +89,13 @@ O servidor estará disponível em `http://localhost:3000` por padrão.
   * `id` (ID da tarefa a ser atualizada)
 * **Corpo da Solicitação:**
 
-<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>json</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copiar código</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-json">{
+```json
+{
     "title": "Novo Título",
     "description": "Nova Descrição",
     "dueDate": "Nova Data de Vencimento"
   }
-  </code></div></div></pre>
+```
 
 * **Resposta:**
   * **Código 200:** `{"message": "Task atualizada com sucesso"}`
